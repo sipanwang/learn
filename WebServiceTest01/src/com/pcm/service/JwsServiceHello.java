@@ -6,50 +6,50 @@ import javax.xml.ws.Endpoint;
 
 /**
 * Title: ServiceHello
-* Description: »ùÓÚjdk1.7ÒÔÉÏµÄjavax.jws ·¢²¼webservice½Ó¿Ú
-                @WebService £­ ËüÊÇÒ»¸ö×¢½â£¬ÓÃÔÚÀàÉÏÖ¸¶¨½«´ËÀà·¢²¼³ÉÒ»¸öws¡£
-                Endpoint ¨C ´ËÀàÎª¶Ëµã·şÎñÀà£¬ËüµÄ·½·¨publishÓÃÓÚ½«Ò»¸öÒÑ¾­Ìí¼ÓÁË@WebService×¢½â
-                ¶ÔÏó°ó¶¨µ½Ò»¸öµØÖ·µÄ¶Ë¿ÚÉÏ¡£ 
+* Description: åŸºäºjdk1.7ä»¥ä¸Šçš„javax.jws å‘å¸ƒwebserviceæ¥å£
+                @WebService ï¼ å®ƒæ˜¯ä¸€ä¸ªæ³¨è§£ï¼Œç”¨åœ¨ç±»ä¸ŠæŒ‡å®šå°†æ­¤ç±»å‘å¸ƒæˆä¸€ä¸ªwsã€‚
+                Endpoint â€“ æ­¤ç±»ä¸ºç«¯ç‚¹æœåŠ¡ç±»ï¼Œå®ƒçš„æ–¹æ³•publishç”¨äºå°†ä¸€ä¸ªå·²ç»æ·»åŠ äº†@WebServiceæ³¨è§£
+                å¯¹è±¡ç»‘å®šåˆ°ä¸€ä¸ªåœ°å€çš„ç«¯å£ä¸Šã€‚ 
 * Version:1.0.0  
 * @author panchengming
  */
 @WebService  
 public class JwsServiceHello {
 
-    /** ¹©¿Í»§¶Ëµ÷ÓÃ·½·¨  ¸Ã·½·¨ÊÇ·Ç¾²Ì¬µÄ£¬»á±»·¢²¼
-     * @param name  ´«Èë²ÎÊı
-     * @return String ·µ»Ø½á¹û
+    /** ä¾›å®¢æˆ·ç«¯è°ƒç”¨æ–¹æ³•  è¯¥æ–¹æ³•æ˜¯éé™æ€çš„ï¼Œä¼šè¢«å‘å¸ƒ
+     * @param name  ä¼ å…¥å‚æ•°
+     * @return String è¿”å›ç»“æœ
      * */
     public String getValue(String name){
-        return "»¶Ó­Äã£¡ "+name;
+        return "æ¬¢è¿ä½ ï¼ "+name;
     }
 
     /**
-     * ·½·¨ÉÏ¼Ó@WebMentod(exclude=true)ºó£¬´Ë·½·¨²»±»·¢²¼£»
+     * æ–¹æ³•ä¸ŠåŠ @WebMentod(exclude=true)åï¼Œæ­¤æ–¹æ³•ä¸è¢«å‘å¸ƒï¼›
      * @param name
      * @return
      */
     @WebMethod(exclude=true)  
     public String getHello(String name){
-        return "ÄãºÃ£¡ "+name;
+        return "ä½ å¥½ï¼ "+name;
     }
 
-    /** ¾²Ì¬·½·¨²»»á±»·¢²¼
+    /** é™æ€æ–¹æ³•ä¸ä¼šè¢«å‘å¸ƒ
      * @param name
      * @return
      */
     public static String getString(String name){
-        return "ÔÙ¼û£¡"+name;
+        return "å†è§ï¼"+name;
     }
 
 
-     //Í¨¹ıEndPoint(¶Ëµã·şÎñ)·¢²¼Ò»¸öWebService
+     //é€šè¿‡EndPoint(ç«¯ç‚¹æœåŠ¡)å‘å¸ƒä¸€ä¸ªWebService
     public static void main(String[] args) {
-     /*²ÎÊı:1,±¾µØµÄ·şÎñµØÖ·;
-           2,Ìá¹©·şÎñµÄÀà;
+     /*å‚æ•°:1,æœ¬åœ°çš„æœåŠ¡åœ°å€;
+           2,æä¾›æœåŠ¡çš„ç±»;
       */
      Endpoint.publish("http://192.168.137.100:8080/Service/ServiceHello", new JwsServiceHello());
-     System.out.println("·¢²¼³É¹¦!");
-     //·¢²¼³É¹¦ºó ÔÚä¯ÀÀÆ÷ÊäÈë http://192.168.137.100:8080/Service/ServiceHello?wsdl
+     System.out.println("å‘å¸ƒæˆåŠŸ!");
+   //å‘å¸ƒæˆåŠŸå åœ¨æµè§ˆå™¨è¾“å…¥http://192.168.137.100:8080/Service/ServiceHello?wsdl
     }
 }

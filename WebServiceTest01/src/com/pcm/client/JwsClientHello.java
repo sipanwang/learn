@@ -5,16 +5,16 @@ import com.pcm.ws.jms.JwsServiceHelloService;
 /**
  * 
 * Title: JwsClientHello
-* Description: webService ¿Í»§¶Ëµ÷ÓÃ
+* Description: webService å®¢æˆ·ç«¯è°ƒç”¨
 * Version:1.0.0  
 * @author panchengming
  */
 public class JwsClientHello {
 
     public static void main(String[] args) {
-         //µ÷ÓÃwebservice
+    	//è°ƒç”¨webservice
         JwsServiceHello hello=new JwsServiceHelloService().getJwsServiceHelloPort();
-        String name=hello.getValue("±´¶à·Ò");
+        String name=hello.getValue("è´å¤šèŠ¬");
         System.out.println(name);
     }
 }
