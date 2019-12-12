@@ -7,10 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="springboot-helloword" />
+        <module name="springboot-loginform" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="springboot-helloword" target="1.8" />
+      <module name="springboot-loginform" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

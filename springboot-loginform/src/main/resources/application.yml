@@ -1,0 +1,10 @@
+server:
+  port: 9080
+  servlet:
+    context-path: /spring
+##log leval info or debug
+logging:
+  level:
+    root: info
+  path: ../springboot-loginform/log/
+

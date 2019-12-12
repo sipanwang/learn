@@ -1,12 +1,13 @@
 server:
-#指定主程序启动端口
   port: 9080
-#指定上下文路径
   servlet:
     context-path: /hello
-#指定日志等级和路径
 logging:
   level:
-    root: debug
+    root: info #debug/info
   path: ./log/
+student:
+  name: siri
+  age: 28
+  sex: boy
 

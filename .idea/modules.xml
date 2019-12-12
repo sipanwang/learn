@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/learn-java/learn-java.iml" filepath="$PROJECT_DIR$/learn-java/learn-java.iml" />
       <module fileurl="file://$PROJECT_DIR$/learn-pythonGame/learn-pythonGame.iml" filepath="$PROJECT_DIR$/learn-pythonGame/learn-pythonGame.iml" />
       <module fileurl="file://$PROJECT_DIR$/learn-springboot/springboot-helloword/springboot-helloword.iml" filepath="$PROJECT_DIR$/learn-springboot/springboot-helloword/springboot-helloword.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-loginform/springboot-loginform.iml" filepath="$PROJECT_DIR$/springboot-loginform/springboot-loginform.iml" />
     </modules>
   </component>
 </project>
