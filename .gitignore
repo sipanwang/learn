@@ -1,0 +1,10 @@
+/target/
+/.settings/
+/.project
+/.classpath
+/logs/
+*/node_modules/*
+/data/
+/.idea
+/merged
+*.iml

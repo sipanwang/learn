@@ -1,0 +1,54 @@
+#系统级别配置
+server:
+  port: 10010
+logging.level: INFO
+
+##工作模式generate造数模式，merge数据合并模式
+sc.work.mode: generate
+
+##数据的时间区间
+sc.time:
+  start: 2019-11-07 #数据的开始日期
+  end: 2019-11-07 #数据的结束日期
+
+##当数据生成模式开启生效
+generator:
+  record:
+    perDay: 10 #每日数据量
+    filepath: ./data/ #生成数据的目录
+
+  ratio: 0.3 # 密集型数据分布,0.1代表10%
+  spec: #密集型数据的列表
+    ip: 10.100.1.1,10.100.1.2 #密集ip
+    dfp: owkXstVfMEbQItdGvFQcRFdRtufJqjkA,VNwcKgGhRlcXiZZohGySNsxhvfmWinFL #密集设备
+    acc: 6210990000000001,6210990000000002 #密集账号
+    peer_acc: 6210990000000003,6210990000000004 #密集目标账号
+    cust_id: user001,user002 #密集用户号
+    bizChannel: pos,sca #密集渠道
+    bizCode: 021000,031000,021007,021011,071000 #密集业务类型
+    operCardType: 01,02,03 #密集操作卡类型
+    respCode: 00,88,43,45,51,55 #密集标准银联应答码
+    
+
+  data: #以下数据制造符合高斯分布
+    amt: #金额。
+      min: 1 #取值的范围
+      max: 100000
+    cacc: #付款方账号。
+      min: 6210990000000001
+      max: 6210990800000000
+    peerCc: #收款方账号。
+      min: 6210990300000001
+      max: 6210991000000000
+    org: #机构。
+      min: 1
+      max: 9999
+    custID: #客户号。
+      min: 0
+      max: 100000000
+
+##当数据合并模式开启生效
+merge:
+  sourceFilepath: ./data/ #需要合并的源数据列表用","隔开
+  targetFile: ./merged/data.merged.csv #合并过后的目标文件。
+
